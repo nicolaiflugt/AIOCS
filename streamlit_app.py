@@ -623,8 +623,25 @@ def bacon_code_decode(code_text):
 # Streamlit app
 st.title("Kodesamling")
 
-method = st.selectbox("Vælg metode:", ("Morsekode", "ROT-X", "Alfa-Nr.", "Kodeordskode", "Frimurerkode", "100P-koden", "Romertal", "Tastaturkode", "Bogkoden", "Kinesisk skrift", "Røversprog", "Punktskrift", "Semaforkode", "Binærkode", "Vigenère", "Bifid", "Baconkode"))
-
+method = st.selectbox("Vælg metode:", (
+    "100P-koden",
+    "Alfa-Nr.",
+    "Baconkode",
+    "Bifid",
+    "Binærkode",
+    "Bogkoden",
+    "Frimurerkode",
+    "Kinesisk skrift",
+    "Kodeordskode",
+    "Morsekode",
+    "Punktskrift",
+    "ROT-X",
+    "Romertal",
+    "Røversprog",
+    "Semaforkode",
+    "Tastaturkode",
+    "Vigenère"
+))
 
 
 if method == "Morsekode":
