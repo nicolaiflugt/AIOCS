@@ -623,7 +623,7 @@ def bacon_code_decode(code_text):
 # Streamlit app
 st.title("Kodesamling")
 
-method = st.selectbox("Vælg metode:", ("Morsekode", "ROT-X", "Alfa-Nr.", "Kodeordskode", "Frimurerkode", "100P-koden", "Romertal", "Tastaturkode", "Bogkoden", "Kinesisk skrift", "Røversprog", "Punktiskrift", "Semaforkode", "Binærkode", "Vigenère", "Bifid", "Baconkode"))
+method = st.selectbox("Vælg metode:", ("Morsekode", "ROT-X", "Alfa-Nr.", "Kodeordskode", "Frimurerkode", "100P-koden", "Romertal", "Tastaturkode", "Bogkoden", "Kinesisk skrift", "Røversprog", "Punktskrift", "Semaforkode", "Binærkode", "Vigenère", "Bifid", "Baconkode"))
 
 
 
@@ -726,7 +726,7 @@ elif method == "Frimurerkode":
     st.markdown("---")
     tekst = st.text_area("Skriv dine resultater her:", height=200)
 
-elif method == "100P-kode":
+elif method == "100P-koden":
     mode = st.radio("Vælg tilstand:", ("Kod", "Afkod"))
     user_input = st.text_area("Indtast tekst eller kode:")
     if st.button("Udfør"):
@@ -916,8 +916,6 @@ elif method == "Binærkode":
     # Fjern indekset helt
     df = df.reset_index(drop=True)
 
-    # Vis tabellen
-    st.subheader("Binærkode Tabel")
     st.dataframe(df, use_container_width=False)
 
 elif method == "Vigenère":
